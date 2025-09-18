@@ -7,6 +7,8 @@ requires-python = ">=3.13"
 dependencies = [
     "camelot-py[cv]>=1.0.0",
     "cryptography>=45.0.6",
+    "dmba>=0.2.4",
+    "dotenv>=0.9.9",
     "ipykernel>=6.29.5",
     "matplotlib>=3.10.3",
     "nbdime>=4.0.2",
@@ -14,9 +16,12 @@ dependencies = [
     "openpyxl>=3.1.5",
     "pandas>=2.3.1",
     "pdfminer-six>=20250506",
+    "pygam>=0.10.1",
     "pypdf>=5.9.0",
     "python-dotenv>=1.1.1",
     "scikit-learn>=1.7.0",
     "scipy>=1.16.0",
     "seaborn>=0.13.2",
+    "speechrecognition>=3.14.3",
+    "statsmodels>=0.14.5",
 ]
