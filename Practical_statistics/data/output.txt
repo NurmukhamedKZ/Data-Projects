@@ -5,8 +5,8 @@ Model:                         GLMGam   Df Residuals:                      295
 Model Family:                Gaussian   Df Model:                        17.00
 Link Function:               Identity   Scale:                      2.7471e+10
 Method:                         PIRLS   Log-Likelihood:                -4196.6
-Date:                Sun, 14 Sep 2025   Deviance:                   8.1039e+12
-Time:                        20:19:16   Pearson chi2:                 8.10e+12
+Date:                Wed, 24 Sep 2025   Deviance:                   8.1039e+12
+Time:                        14:43:50   Pearson chi2:                 8.10e+12
 No. Iterations:                     3   Pseudo R-squ. (CS):             0.9901
 Covariance Type:            nonrobust                                         
 ====================================================================================
