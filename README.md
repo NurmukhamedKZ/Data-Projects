@@ -1,8 +1,9 @@
 ### It's my pet projects as ML engineer
 
 
-- Projects with using Linear regresion:
+- Projects with using Linear regression:
     1. House_rent_project
+    
 
 
 ## Some statistics from the House rent predictor:
@@ -29,20 +30,20 @@
 ---
 #### **After turning month into string**
 
-**MSE**: 44319032.79
-**RMSE**: 6657.25
-**MAE**: 4741.99
-**R2 Score**: 0.6859
-**Adjusted R2**: 0.6727865265935423 
-Cross-validation scores: [0.68144882 0.67007972 0.47966192 0.57718857 0.41892005] 
-Average CV score: 0.5655 (+/- 0.2066)
+- **MSE**: 44319032.79
+- **RMSE**: 6657.25
+- **MAE**: 4741.99
+- **R2 Score**: 0.6859
+- **Adjusted R2**: 0.6727865265935423 
+- Cross-validation scores: [0.68144882 0.67007972 0.47966192 0.57718857 0.41892005] 
+- Average CV score: 0.5655 (+/- 0.2066)
 
 ---
 #### **After making polynomial regression for "Size" feature**
 
 Polynomial regression Metrics: 
-**MSE**: 43019580.62
-**RMSE**: 6558.93
-**MAE**: 4671.06
-**R2 Score**: 0.6951
-**Adjusted R2**: 0.6819381925928998
+- **MSE**: 43019580.62
+- **RMSE**: 6558.93
+- **MAE**: 4671.06
+- **R2 Score**: 0.6951
+- **Adjusted R2**: 0.6819381925928998
