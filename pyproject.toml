@@ -5,10 +5,12 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "adjusttext>=1.3.0",
     "camelot-py[cv]>=1.0.0",
     "cryptography>=45.0.6",
     "dmba>=0.2.4",
     "dotenv>=0.9.9",
+    "graphviz>=0.21",
     "imblearn>=0.0",
     "ipykernel>=6.29.5",
     "matplotlib>=3.10.3",
@@ -17,6 +19,7 @@ dependencies = [
     "openpyxl>=3.1.5",
     "pandas>=2.3.1",
     "pdfminer-six>=20250506",
+    "prince>=0.16.1",
     "pygam>=0.10.1",
     "pypdf>=5.9.0",
     "python-dotenv>=1.1.1",
@@ -26,5 +29,6 @@ dependencies = [
     "seaborn>=0.13.2",
     "speechrecognition>=3.14.3",
     "statsmodels>=0.14.5",
+    "xgboost>=3.0.5",
     "xlrd>=2.0.2",
 ]
