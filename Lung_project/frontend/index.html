@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Tuberculosis Classifier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <path d="M20 5C12.3 5 6 11.3 6 19c0 4.5 2.1 8.5 5.3 11.1m18.4-11.1C33.9 10.5 35 14.6 35 19c0 7.7-6.3 14-14 14s-14-6.3-14-14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <h1>Lung TB Classifier</h1>
+            </div>
+            <p class="subtitle">AI-Powered Tuberculosis Detection</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <div class="upload-box" id="uploadBox">
+                    <svg class="upload-icon" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2v12m0 0l-4-4m4 4l4-4M2 12v8a2 2 0 002 2h16a2 2 0 002-2v-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h2>Upload Lung X-Ray Image</h2>
+                    <p>Drag and drop your image here or click to select</p>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+            </section>
+
+            <!-- Preview Section -->
+            <section class="preview-section" id="previewSection" style="display: none;">
+                <div class="preview-container">
+                    <div class="image-preview">
+                        <img id="previewImage" alt="Preview" src="">
+                        <button class="btn-remove" id="removeBtn" title="Remove image">✕</button>
+                    </div>
+                    <div class="image-info">
+                        <p><strong>File:</strong> <span id="fileName"></span></p>
+                        <p><strong>Size:</strong> <span id="fileSize"></span></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Action Buttons -->
+            <section class="action-section">
+                <button class="btn btn-primary" id="analyzeBtn" disabled>
+                    <span>Analyze Image</span>
+                    <span class="spinner" id="spinner" style="display: none;"></span>
+                </button>
+                <button class="btn btn-secondary" id="clearBtn">Clear</button>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-card">
+                    <h3>Classification Results</h3>
+                    
+                    <!-- Result Badge -->
+                    <div class="result-badge" id="resultBadge">
+                        <div class="badge-content">
+                            <span class="badge-label" id="resultLabel">Analyzing...</span>
+                            <span class="badge-confidence" id="resultConfidence">0%</span>
+                        </div>
+                    </div>
+
+                    <!-- Confidence Bar -->
+                    <div class="confidence-section">
+                        <div class="confidence-item">
+                            <label>Tuberculosis Positive</label>
+                            <div class="progress-bar">
+                                <div class="progress-fill positive" id="tbPositiveBar"></div>
+                            </div>
+                            <span class="confidence-text" id="tbPositiveText">0%</span>
+                        </div>
+                        <div class="confidence-item">
+                            <label>Tuberculosis Negative</label>
+                            <div class="progress-bar">
+                                <div class="progress-fill negative" id="tbNegativeBar"></div>
+                            </div>
+                            <span class="confidence-text" id="tbNegativeText">0%</span>
+                        </div>
+                    </div>
+
+                    <!-- Details -->
+                    <div class="details-section">
+                        <h4>Details</h4>
+                        <div class="detail-item">
+                            <span class="label">Analysis Time:</span>
+                            <span class="value" id="analysisTime">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Model Version:</span>
+                            <span class="value" id="modelVersion">1.0</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="value" id="resultStatus">Processing</span>
+                        </div>
+                    </div>
+
+                    <!-- Disclaimer -->
+                    <div class="disclaimer">
+                        <strong>⚠️ Disclaimer:</strong> This tool is for educational and research purposes only. 
+                        It should not be used as a substitute for professional medical diagnosis. 
+                        Always consult with a qualified healthcare professional for medical advice.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section class="error-section" id="errorSection" style="display: none;">
+                <div class="error-card">
+                    <h3>⚠️ Error</h3>
+                    <p id="errorMessage"></p>
+                    <button class="btn btn-secondary" id="closeErrorBtn">Close</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Lung TB Classifier. All rights reserved. For research and educational purposes only.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
