@@ -1,6 +1,6 @@
  // Configuration
 const CONFIG = {
-    API_URL: 'http://localhost:8000',  // Update with your FastAPI server URL
+    API_URL: 'https://tb-classifier-backend.onrender.com',  // Update with your FastAPI server URL
     MAX_FILE_SIZE: 10 * 1024 * 1024,   // 10MB
     ALLOWED_TYPES: ['image/jpeg', 'image/png', 'image/jpg']
 };
