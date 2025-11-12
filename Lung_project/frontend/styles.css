@@ -409,6 +409,68 @@ body {
 }
 
 /* ===========================
+   Visualization Section
+   =========================== */
+.visualization-section {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid #e8f0f7;
+    animation: slideUp 0.5s ease-out;
+}
+
+.visualization-section h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.viz-description {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.visualization-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+    align-items: flex-start;
+}
+
+.viz-item {
+    text-align: center;
+    flex: 0 1 auto;
+}
+
+.viz-item h5 {
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.viz-image {
+    width: 300px;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e0e0e0;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.viz-info {
+    font-size: 0.85em;
+    color: #999;
+    margin: 0;
+}
+
+/* ===========================
    Error Section
    =========================== */
 .error-section {
@@ -521,5 +583,18 @@ body {
 
     .results-card {
         padding: 20px;
+    }
+
+    .visualization-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .viz-item {
+        width: 100%;
+    }
+
+    .viz-image {
+        max-width: 100%;
     }
 }

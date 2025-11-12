@@ -213,6 +213,16 @@ function displayResults(result, analysisTime) {
     document.getElementById('modelVersion').textContent = model_version;
     document.getElementById('resultStatus').textContent = 'Complete';
 
+    // Display Grad-CAM visualizations if available
+    const visualizationSection = document.getElementById('visualizationSection');
+    if (result.heatmap && result.overlayed_image) {
+        document.getElementById('heatmapImage').src = result.heatmap;
+        document.getElementById('overlayImage').src = result.overlayed_image;
+        visualizationSection.style.display = 'block';
+    } else {
+        visualizationSection.style.display = 'none';
+    }
+
     resultsSection.style.display = 'block';
 }
 
