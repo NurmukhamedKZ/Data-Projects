@@ -1,19 +1,33 @@
-def calculate_factorial(n):
-    if n < 0:
-        print("Factorial is not defined for negative numbers.")
-    elif n == 0 or n == 1:
-        return 1
+def add(a,b):
+    return a + b
+def subtract(a,b):
+    return a - b
+def multiply(a,b):
+    return a * b
+def divide(a,b):
+    return a / b
+
+num1 = input("enter first number: ")
+num2 = input("enter second number: ")
+
+if num1.isdigit() and num2.isdigit():
+    num1 = float(num1)
+    num2 = float(num2)
+    print("Select operation.")
+    print("1.Add\n2.Subtract\n3.Multiply\n4.Divide\n")
+    choice = input("Enter choice(1/2/3/4): ")
+    if choice == '1':
+        print(num1,"+",num2,"=", add(num1,num2))
+    elif choice == '2':
+        print(num1,"-",num2,"=", subtract(num1,num2))
+    elif choice == '3':
+        print(num1,"*",num2,"=", multiply(num1,num2))
+    elif choice == '4':
+        if num2 != 0:
+            print(num1,"/",num2,"=", divide(num1,num2))
+        else:
+            print("Error! Division by zero.")
     else:
-        result = 1
-        for i in range(1, n + 1):
-            result *= i
-        return result
-    
-num1 = input("Enter a number: ")
-try:
-    num = int(num1)
-    factorial = calculate_factorial(num)
-    if factorial is not None:
-        print(f"Factorial of {num} is {factorial}.")
-except ValueError:
-    print("Please enter a valid integer.")
+        print("Invalid input")
+else:
+    print("type correct numbers")
