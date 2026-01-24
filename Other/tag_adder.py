@@ -1,10 +1,10 @@
 import os
 
 # Путь к папке с твоими заметками Obsidian
-NOTES_FOLDER = "/Users/nurma/obsidian_sync/IT/Machine Learning"
+NOTES_FOLDER = "/Users/nurma/obsidian_sync/Selfdeveloping"
 
 # Тег, который нужно добавить
-TAG = "#AI"
+TAG = "#SelfDevelopment"
 
 def add_tag_to_notes(folder, tag):
     for root, _, files in os.walk(folder):
@@ -17,7 +17,7 @@ def add_tag_to_notes(folder, tag):
 
                 # Проверяем, есть ли уже тег
                 if tag not in content:
-                    new_content = content + "\n\n" + tag
+                    new_content = content + "\n\n" + TAG
 
                     with open(file_path, "w", encoding="utf-8") as f:
                         f.write(new_content)

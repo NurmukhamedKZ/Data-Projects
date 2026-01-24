@@ -1,2 +1,14 @@
 .env
 .venv
+
+.csv
+.pdf
+.xlsx
+.jpg
+.png
+.h5
+.xls
+.gz
+.txt
+.pth
+
